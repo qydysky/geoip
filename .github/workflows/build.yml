@@ -26,16 +26,16 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - name: Set variables
-        run: |
-          echo "TAG_NAME=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
-        shell: bash
         
       - name: Build geoip files
         run: |
           go run ./
 
+      - name: Set Release Name
+        run: |
+          echo "TIME=$(date +"%Y-%m-%d")" >> $GITHUB_ENV
+          echo "HASH=$(git rev-parse --short "$GITHUB_SHA")" >> $GITHUB_ENV
+        
       - name: Upload a Release Asset
         uses: softprops/action-gh-release@v1
         with:
