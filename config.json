@@ -25,10 +25,10 @@
   ],
   "output": [
     {
-      "type": "v2rayGeoIPDat",
+      "type": "text",
       "action": "output",
       "args": {
-        "outputName": "geoip.dat"
+        "outputName": "geoip.txt"
       }
     }
   ]
