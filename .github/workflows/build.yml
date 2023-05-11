@@ -43,5 +43,4 @@ jobs:
         with:
           tag_name: AutoBuild-${{ env.TIME }}-${{ env.HASH }}
           files: |
-            ./output/text/cn.txt
-            ./output/text/private.txt
+            ./output/dat/geoip.dat
