@@ -30,6 +30,13 @@
       "args": {
         "outputName": "geoip.dat"
       }
+    },
+    {
+      "type": "text",
+      "action": "output",
+      "args": {
+        "outputName": "geoip.txt"
+      }
     }
   ]
 }
